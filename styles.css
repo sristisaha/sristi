@@ -1,0 +1,188 @@
+:root {
+  --lavender: #bec4ed;
+  --orange: #ee8a07;
+  --mint: #d1f3bb;
+  --dark: #2b2b2b;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: linear-gradient(135deg, #f8f9ff, #eef1ff);
+  color: var(--dark);
+  padding: 20px;
+  overflow-x: hidden;
+}
+
+.bg-blur {
+  position: fixed;
+  border-radius: 50%;
+  filter: blur(100px);
+  z-index: -1;
+}
+
+.blur-1 {
+  width: 300px;
+  height: 300px;
+  background: var(--lavender);
+  top: 0;
+  left: 0;
+}
+
+.blur-2 {
+  width: 250px;
+  height: 250px;
+  background: var(--mint);
+  right: 0;
+  top: 200px;
+}
+
+.blur-3 {
+  width: 220px;
+  height: 220px;
+  background: var(--orange);
+  bottom: 0;
+  left: 40%;
+  opacity: 0.4;
+}
+
+.glass {
+  background: rgba(255,255,255,0.22);
+  backdrop-filter: blur(22px);
+  -webkit-backdrop-filter: blur(22px);
+  border: 1px solid rgba(255,255,255,0.35);
+  border-radius: 28px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.08);
+}
+
+.navbar {
+  padding: 20px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+  position: sticky;
+  top: 20px;
+}
+
+.navbar nav {
+  display: flex;
+  gap: 20px;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: var(--dark);
+  font-weight: 600;
+}
+
+.hero {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 30px;
+  margin-bottom: 40px;
+}
+
+.hero-text {
+  padding: 50px;
+}
+
+.hero-text h1 {
+  font-size: 64px;
+  line-height: 1.05;
+  margin: 15px 0;
+}
+
+.hero-text p {
+  line-height: 1.7;
+}
+
+.tag {
+  color: var(--orange);
+  font-weight: 700;
+}
+
+.hero-image {
+  padding: 20px;
+}
+
+.hero-image img {
+  width: 100%;
+  border-radius: 22px;
+}
+
+.buttons {
+  margin-top: 25px;
+  display: flex;
+  gap: 15px;
+}
+
+.btn {
+  padding: 14px 24px;
+  border-radius: 999px;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.primary {
+  background: var(--orange);
+  color: white;
+}
+
+.secondary {
+  background: white;
+  color: var(--dark);
+}
+
+.section {
+  padding: 40px;
+  margin-bottom: 30px;
+}
+
+.section h2 {
+  margin-bottom: 20px;
+  font-size: 36px;
+}
+
+.grid,
+.projects {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.card,
+.project {
+  padding: 30px;
+  font-weight: 600;
+}
+
+.contact {
+  text-align: center;
+}
+
+@media (max-width: 900px) {
+  .hero,
+  .grid,
+  .projects {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-text h1 {
+    font-size: 42px;
+  }
+
+  .navbar {
+    flex-direction: column;
+    gap: 15px;
+  }
+}
